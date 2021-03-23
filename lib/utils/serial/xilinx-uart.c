@@ -13,8 +13,8 @@
 #define REG_STATUS	0x08
 #define REG_CONTROL	0x0C
 
-#define UART_TX_FULL    0x3
-#define UART_RX_VALID   0x0
+#define UART_TX_FULL    (1<<0x3)
+#define UART_RX_VALID   (1<<0x0)
 
 static volatile void *uart_base;
 
