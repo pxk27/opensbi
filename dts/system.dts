@@ -47,6 +47,18 @@
 			};
 		};
 	};
+	PLIC: interrupt-controller@3c000000 {
+            #interrupt-cells = <1>;
+            compatible = "riscv,plic0";
+            interrupt-controller;
+            interrupts-extended = <&L4 9 &L4 11>;
+            //reg = <0 0xc000000 0 0x4000000>;
+            reg = <0 0x3c000000 0 0x4000000>;
+            reg-names = "control";
+            riscv,max-priority = <7>;
+            riscv,ndev = <64>;
+        };
+	
 	L18: soc {
 		#address-cells = <2>;
 		#size-cells = <2>;
