@@ -11,7 +11,7 @@
 		};
 		L14: serial@60000000 {
 			compatible = "xilinx,uartlite", "xlnx,xps-uartlite-1.00.a";
-			// interrupt-parent = <&L2>;
+			interrupt-parent = <&PLIC>;
 			interrupts = <3>;
 			current-speed = <115200>;
 			reg = <0x0 0x40600000 0x0 0x1000>;
@@ -23,7 +23,7 @@
     };
 	};
   chosen {
-    bootargs = "console=hvc0 earlyprintk earlycon ";
+    bootargs = " earlyprintk earlycon ";
   };
 	L11: memory@100000000 {
 		device_type = "memory";
