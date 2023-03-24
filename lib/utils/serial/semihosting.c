@@ -45,6 +45,7 @@ static bool try_semihosting = true;
 
 bool semihosting_enabled(void)
 {
+	return 0; // nemu can't run ebreak normally
 	register int ret asm ("a0") = SYSERRNO;
 	register void *param0 asm ("a1") = NULL;
 	unsigned long tmp = 0;
