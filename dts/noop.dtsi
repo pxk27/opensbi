@@ -23,7 +23,7 @@
     };
 	};
   chosen {
-    bootargs = "console=hvc0 earlyprintk earlycon=sbi ";
+    bootargs = "console=hvc0 earlycon=sbi ";
   };
 	L11: memory@100000000 {
 		device_type = "memory";
